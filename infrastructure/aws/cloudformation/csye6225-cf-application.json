@@ -63,7 +63,7 @@
 
     "domainName":{
       "Type":"String",
-      "Default":"csye6225-spring2018-jiaxi.me."
+      "Default":"csye6225-spring2018-qiuche.me."
     },
 
     "EC2Profile":{
@@ -261,7 +261,7 @@
         "Type":"AWS::ElasticLoadBalancingV2::Listener",
         "Properties":{
           "Certificates":[
-            {"CertificateArn":"arn:aws:acm:us-east-1:491833366348:certificate/f57bec95-cae6-4d0e-a4d1-8fadf0b227fc"}
+            {"CertificateArn":"arn:aws:acm:us-east-1:787443759532:certificate/202a993a-a3e6-4467-bcd3-6b986342afcc"}
           ],
           "DefaultActions":[{
             "Type":"forward",
@@ -427,7 +427,7 @@
       "ImageS3Bucket" : {
         "Type" : "AWS::S3::Bucket",
          "Properties" : {
-           "BucketName" : "s3.csye6225-spring2018-jiaxi.me"
+           "BucketName" : "s3.csye6225-spring2018-qiuche.me"
         }
       }
   }

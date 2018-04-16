@@ -3,13 +3,13 @@ var base64ToImage = require('base64-to-image');
 var AWS = require('aws-sdk');
 AWS.config.update({ 
 
-    accessKeyId: 'AKIAJXBLKRCTZOUPJ4FQ', 
-    secretAccessKey: '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',
+    accessKeyId: 'AKIAJB57JPMPGKIQKB6A', 
+    secretAccessKey: '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',
 
     region: 'us-east-1' 
 });
 var s3 = new AWS.S3();
-var s3Bucket = new AWS.S3( { params: {Bucket: 's3.csye6225-spring2018-jiaxi.me'} } )
+var s3Bucket = new AWS.S3( { params: {Bucket: 's3.csye6225-spring2018-qiuche.me'} } )
 
 class ImageController {
 
@@ -62,7 +62,7 @@ class ImageController {
             user,
         } = ctx.request.body
 
-        var urlParams = {Bucket: 's3.csye6225-spring2018-jiaxi.me', Key: user};
+        var urlParams = {Bucket: 's3.csye6225-spring2018-qiuche.me', Key: user};
         ctx.body=s3Bucket.getSignedUrl('getObject', urlParams);
     }
 
@@ -71,7 +71,7 @@ class ImageController {
 
         console.log(user)
 
-        var params = {Bucket: "s3.csye6225-spring2018-jiaxi.me", Key: user};
+        var params = {Bucket: "s3.csye6225-spring2018-qiuche.me", Key: user};
         s3.deleteObject(params, function(err, data) {
            if (err) console.log(err, err.stack); // an error occurred
            else     console.log(data);           // successful response
