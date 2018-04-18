@@ -138,7 +138,7 @@
         "Type":"AWS::AutoScaling::AutoScalingGroup",
         "Properties":{
           "LaunchConfigurationName":{"Ref":"LaunchConfig"},
-          "VPCZoneIdentifier":[{"Ref":"PrivateSubnetId1"},{"Ref":"PrivateSubnetId2"}],
+          "VPCZoneIdentifier":[{"Ref":"PublicSubnetId1"},{"Ref":"PbulicSubnetId2"}],
           "TargetGroupARNs":[{"Ref":"LBTargetGroup"}],
           "MinSize":"3",
           "MaxSize":"7",
